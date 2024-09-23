@@ -18,19 +18,69 @@ body {
 }
 
 header {
-    background-color: lightcoral;
+    background-color: #ffffff;
+    padding: 0 1rem;
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    box-shadow: 0 2px 2px #3a3a3a;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+header a {
+    text-decoration: none;
+    color: inherit;
 }
 
 h1 {
     font-family: 'oswald' , sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #252525;
+}
+#menu {
+    font-size: 110%;
+    letter-spacing: 4px;
+    list-style-type: none;
 }
 
-h1 {
-    font-family: "oswald" , sans-serif;
+#menu > li {
+    margin-bottom: 1em;
 }
+.active {
+    border-bottom: 1px solid #3a3a3a
+}
+
+nav{
+    position: absolute;
+    background-color: #ffffff;
+    width: 100%;
+    left: 0;
+    padding: 0 1rem;
+    box-shadow: 0 2px 2px #3a3a3a;
+    display: none;
+    top: 100%;
+}
+
+#nav-toggle:checked~nav {
+    display: block; 
+}
+
+#nav-toggle {
+    display: none;
+}
+
+.nav-toggle-lable {
+    font-size: 2rem;
+}
+
+
 main { 
     background-color: lightblue;
     flex: 1 0 auto;
+    margin-top: 47px;
 }
 footer {
     background-color: orange
@@ -60,13 +110,47 @@ header {
     width: 100%;
     box-shadow: 0 2px 2px #3a3a3a;
 
-}
+
 
 main {
-Main content
-flex: 1 0 auto;
+    content-flex: 1 0 auto;
+
 }
 
 footer {
-Footer
+    background-color: orangered
+
+}
+@media screen and (min-width: 768px) {
+    
+}
+
+nav {
+    display-box: block;
+    position: relative;
+    box-shadow: none;
+    width: fit-content;
+    padding-right: 1rem;
+}
+
+#menu {
+    display:flex;
+}
+
+#menu > li {
+    padding-left 1rem;
+}
+
+.nav-toggle-lable {
+    display: none;
+}
+
+#logo {
+    font-size: 280%;
+    line-height: 75px;
+    margin: 0 0.5ren;
+}
+
+main {
+    margin-top: 79px;
 }
